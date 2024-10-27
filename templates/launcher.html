@@ -1,0 +1,11 @@
+{{ define "title" -}}
+{{ .ServerName }} Launcher
+{{- end }}
+
+{{ define "body" }}
+<div class="server-header">
+  <h1>{{ .ServerName }}</h1>
+  <a class="server-connect-button" href="steam://connect/{{ .ServerAddress }}">Connect</a>
+</div>
+<div class="server-players" hx-get="/players" hx-trigger="revealed" hx-swap="innerHTML"></div>
+{{ end }}

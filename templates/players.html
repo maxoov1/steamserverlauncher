@@ -1,0 +1,5 @@
+{{ define "players" }}
+{{ range .Players -}}
+  <p>{{ .Name }} has {{ .Score }} score.</p>
+{{- end }}
+{{ end }}

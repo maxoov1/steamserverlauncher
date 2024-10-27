@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  max-width: 42rem;
+  margin: 0 auto;
+
+  font: 18px / 1.8 system-ui, sans-serif;
+  text-rendering: optimizeSpeed;
+}
+
+.server-header {
+  background-color: #EEE;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.server-connect-button {
+  text-decoration: none;
+  text-align: center;
+
+  background-color: #3D4BEA;
+  color: #FFF;
+
+  padding: .5rem 1rem;
+
+  border-radius: .5rem;
+
+  &:hover {
+    background-color: #272F94;
+  }
+}
+
+.server-players {
+  display: flex;
+  flex-direction: column;
+
+  margin: 2rem;
+  gap: 1rem;
+}
+
+@media screen and (width < 46rem) {
+  body {
+    margin: 2rem;
+  }
+
+  .server-header {
+    flex-direction: column;
+    align-items: unset;
+  }
+}
